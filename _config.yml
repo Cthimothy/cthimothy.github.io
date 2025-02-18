@@ -21,10 +21,10 @@
 title: Timothy J B Welch
 email: timjbw@protonmail.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  Linux, Emacs and chainsaw wrangler. Reasearch IT Team Lead for Project ADA (AI and Data Science) at University of Exeter.
-  Loves: Prog Rock, OSR TTRPGs, Lisp-like languages, CompSci, SF & horror.
+ Linux, Emacs and chainsaw wrangler. Reasearch IT Team Lead for Project ADA (AI and Data Science) at University of Exeter.
+
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cthimothy.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  cthimothy
 
