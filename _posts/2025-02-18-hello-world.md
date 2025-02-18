@@ -22,5 +22,4 @@ print_hello('world')
 
 Check out my [Github repos][github]
 
-
 [github]: https://cthimothy.github.com
