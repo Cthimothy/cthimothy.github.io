@@ -7,8 +7,10 @@ tags:
 ---
 
 # Create blog post
-'(defun tw/create-jekyll-post ()
-  "Create a new Jekyll blog post in ~/Projects/cthimothy.github.io/_posts/."
+
+{% highlight common_lisp %}
+(defun tw/create-jekyll-post ()
+"Create a new Jekyll blog post in ~/Projects/cthimothy.github.io/_posts/."
   (interactive)
   (let* ((title (read-string "Post title: "))
          (slug (replace-regexp-in-string "[^a-z0-9-]" "" (downcase (replace-regexp-in-string " " "-" title))))
@@ -28,4 +30,5 @@ tags: \n\
 ---\n\n"
                title date))
       (save-buffer)
-      (message "Created new Jekyll post: %s" filename))))'
+      (message "Created new Jekyll post: %s" filename))))
+{% endhighlight %}
