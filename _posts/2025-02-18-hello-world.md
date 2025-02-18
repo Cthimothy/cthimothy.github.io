@@ -5,12 +5,7 @@ date:   2025-02-11 09:57:08 +0000
 categories: blog tech
 ---
 # Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
 
-Hello, world
-`Hello, world!`
 
 {% highlight ruby %}
 def print_hello(name)
