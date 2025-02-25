@@ -33,7 +33,11 @@ social_links:
 
 
 # Build settings
-theme: minima
+# theme: minima
+# plugins:
+#  - jekyll-feed
+
+theme: no-style-please
 plugins:
  - jekyll-feed
 
