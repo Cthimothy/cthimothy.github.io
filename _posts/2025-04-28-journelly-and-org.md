@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Journelly and Org"
+title: "Journaling with Journelly and Denote"
 date: 2025-04-28
 categories: blog
 tags: 
 ---
-
-# Journalling with Journelly
 
 I recently started using [Álvaro Ramírez’s](https://lmno.lol/alvaro) excellent
 Journelly app. It's still in beta, but it has become an essential part of my
