@@ -33,4 +33,4 @@ files.
 I rely on Org-agenda, and would *love* if Journelly gained to functionality to quicky
 record a TODO, but as it is, I am really enjoying using it.
 
-My horrible code is here: https://github.com/Cthimothy/journelly-to-denote/blob/main/journelly-to-denote.el
+My horrible code is [here](https://github.com/Cthimothy/journelly-to-denote/blob/main/journelly-to-denote.el)
