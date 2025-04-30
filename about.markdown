@@ -13,7 +13,7 @@ I worship daily at the Church of Emacs, which is my daily driver for much of my 
 coding, remote server and container admin, notes, journals and PKM, project and task 
 management, blog reading and writing, etc.
 
-<img src="/saint-button.png" alt="Church of Emacs" style="width:33%; height:auto;">
+
 
 # Interests
 Prog Rock, OSR TTRPGs, Lisp-like languages, CompSci, SF/F and horror.
