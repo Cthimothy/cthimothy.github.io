@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-<img src="/tjbw.jpg" alt="me" style="width:33%; height:auto;">
+<img src="/tjbw.jpg" alt="me" style="width:25%; height:auto;">
 
 # Work
 I am a Linux Infrastructure guy (in the Paleozoic Era, we were called Unix SysAdmins).
