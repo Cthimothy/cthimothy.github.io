@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Timothy J B Welch - Phasing in, by phasing out.
+title: Timothy J B Welch
+subtitle: Phasing in, by phasing out.
 email: timjbw@protonmail.ch
 description: >- # this means to ignore newlines until "baseurl:"
  Linux, Emacs and chainsaw wrangler. Reasearch IT Team Lead for Project ADA (AI and Data Science) at University of Exeter.
