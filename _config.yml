@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Timothy J B Welch
+title: Timothy J B Welch - Phasing in, by phasing out.
 email: timjbw@protonmail.ch
 description: >- # this means to ignore newlines until "baseurl:"
  Linux, Emacs and chainsaw wrangler. Reasearch IT Team Lead for Project ADA (AI and Data Science) at University of Exeter.
 
-baseurl: "" # the subpath of your site, e.g. /blog
+Baseurl: "" # The subpath of your site, e.g. /blog
 url: "https://cthimothy.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  cthimothy
