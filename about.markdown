@@ -13,7 +13,8 @@ I worship daily at the Church of Emacs, which is my daily driver for much of my 
 coding, remote server and container admin, notes, journals and PKM, project and task 
 management, blog reading and writing, etc.
 
-
+Since my early teens, I've been a massive H. P. Lovecraft fan. When I first started reading his stories, in my head I pronounced
+His Name as Kuh-Too-Loo, which is why I used Cthimothy (Kuh-Timothy)as an online name (no-one does that these days, so they?). 
 
 # Interests
 Prog Rock, OSR TTRPGs, Lisp-like languages, CompSci, SF/F and horror.
