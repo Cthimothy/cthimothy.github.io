@@ -25,4 +25,38 @@ To something like this:
 ```
 [2025-05-08 13:41:20] C-x b key SPC log
 ```
+
 [https://github.com/Cthimothy/key-logger](https://github.com/Cthimothy/key-logger)
+
+```
+(defun my-keylog-toggle ()
+  "Toggle key logging with timestamps. Ignoring mouse events."
+  (interactive)
+  (let* ((buffer-name "*Key Log*")
+         (hook-symbol 'my-keylog--log-command-hook))
+    (unless (fboundp hook-symbol)
+      (fset hook-symbol
+            (lambda ()
+              (let ((keys (key-description (this-command-keys-vector))))
+                (unless (or (string-match-p "<mouse-" keys)
+                            (string-match-p "<wheel-" keys)
+                            (string-match-p "<double-" keys)
+                            (string-match-p "<triple-" keys)
+                            (string-match-p "<down-mouse-" keys)
+                            (string-match-p "<drag-mouse-" keys))
+                  (let ((timestamp (format-time-string "%Y-%m-%d %H:%M:%S")))
+                    (with-current-buffer (get-buffer-create buffer-name)
+                      (goto-char (point-max))
+                      (unless (bolp)
+                        (insert "\n"))
+                      (insert (format "[%s] %s" timestamp keys))
+                      (dolist (win (get-buffer-window-list (current-buffer) nil t))
+                        (with-selected-window win
+                          (goto-char (point-max))))))))))
+    (if (member hook-symbol post-command-hook)
+        (progn
+          (remove-hook 'post-command-hook hook-symbol)
+          (message "Key logging stopped."))
+      (add-hook 'post-command-hook hook-symbol)
+      (message "Key logging started. See buffer %s" buffer-name))))
+```	  
