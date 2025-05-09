@@ -35,11 +35,11 @@ To something like this:
 [https://github.com/Cthimothy/key-logger](https://github.com/Cthimothy/key-logger)
 
 ```
-(defun my-keylog-toggle ()
+(Defun tw/keylog-toggle ()
   "Toggle key logging with timestamps. Ignoring mouse events."
   (interactive)
   (let* ((buffer-name "*Key Log*")
-         (hook-symbol 'my-keylog--log-command-hook))
+         (hook-symbol 'tw/keylog--log-command-hook))
     (unless (fboundp hook-symbol)
       (fset hook-symbol
             (lambda ()
