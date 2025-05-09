@@ -6,6 +6,12 @@ categories: blog,emacs
 tags: 
 ---
 
+### Update: 2025-May-09
+It's quickly became apparent that this approach is far from ideal. FIXME: Only capture command key strokes (C- and M-) and arguments,
+ which the more I think about it, the less trivial it becomes.
+ 
+ --- 
+
 I wanted a way to see my Emacs key strokes in real time, so I wrote a small function to display them in a buffer.
 I'm sure there are better, existing solutions but this one works for me. It's a bit rough at the moment, as I need to find a way of
  going from this:
@@ -59,4 +65,4 @@ To something like this:
           (message "Key logging stopped."))
       (add-hook 'post-command-hook hook-symbol)
       (message "Key logging started. See buffer %s" buffer-name))))
-```	  
+```
