@@ -7,8 +7,8 @@ tags:
 ---
 
 ### Update: 2025-May-09
-It's quickly became apparent that this approach is far from ideal. FIXME: Only capture command key strokes (C- and M-) and arguments,
- which the more I think about it, the less trivial it becomes.
+It's quickly became apparent that this approach is far from ideal. FIXME: Only capture command key strokes (C- and M-) and arguments;
+ which, the more I think about it, the less trivial it becomes.
  
  --- 
 
