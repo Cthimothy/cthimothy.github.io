@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 <img src="/tjbw.jpg" alt="me" style="width:25%; height:auto;">
-<img src="/glider.svg" alt="me" style="width:25%; height:auto;">
+<img src="/glider.jpg" alt="glider" style="width:25%; height:auto;">
 
 # Work
 I am a Linux Infrastructure guy (in the Paleozoic Era, we were called Unix SysAdmins).
