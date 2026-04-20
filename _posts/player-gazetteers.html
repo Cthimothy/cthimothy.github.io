@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-04-20 Mon 10:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Player Gazetteers</title>
+<meta name="author" content="Timothy J. B. Welch" />
+<meta name="description" content="RPG notes" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Player Gazetteers</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org147db4f">1. Gazetteers</a>
+<ul>
+<li><a href="#orgb805b73">1.1. PC Facing</a>
+<ul>
+<li><a href="#org2b54f60">1.1.1. Setting Primer</a></li>
+<li><a href="#orgd1f0c39">1.1.2. Regional Gazetteers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org147db4f" class="outline-2">
+<h2 id="org147db4f"><span class="section-number-2">1.</span> Gazetteers</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgb805b73" class="outline-3">
+<h3 id="orgb805b73"><span class="section-number-3">1.1.</span> PC Facing</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+<i>The following represents the world as you have heretofore expereinced it.</i>
+</p>
+</div>
+<div id="outline-container-org2b54f60" class="outline-4">
+<h4 id="org2b54f60"><span class="section-number-4">1.1.1.</span> Setting Primer</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+The following is what most folk know — or think they know — about the world.
+It is not complete. It is not always accurate.
+But it is a place to start.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgf11d1cc"></a>Everyday Life<br />
+<ol class="org-ol">
+<li><a id="orgde155cb"></a>The World as It Is<br />
+<div class="outline-text-6" id="text-1-1-1-1-1">
+<p>
+Before anything else, understand this:
+The world is not made for heroes.
+It is made for people trying to get by.
+</p>
+</div>
+</li>
+<li><a id="org6b282cb"></a>Daily Life<br />
+<div class="outline-text-6" id="text-1-1-1-1-2">
+<p>
+Most people:
+</p>
+<ul class="org-ul">
+<li>Are born in one place</li>
+<li>Live there all their lives</li>
+<li>Work from sunrise to sunset</li>
+</ul>
+
+<p>
+They farm, build, trade, or serve.
+They worry about:
+</p>
+<ul class="org-ul">
+<li>Food</li>
+<li>Weather</li>
+<li>Illness</li>
+<li>Making it through the next season</li>
+</ul>
+
+<p>
+Life is not easy—but it is familiar.
+</p>
+</div>
+</li>
+<li><a id="org044a1eb"></a>Towns and Villages<br />
+<div class="outline-text-6" id="text-1-1-1-1-3">
+<p>
+Most settlements are small.
+They are:
+</p>
+<ul class="org-ul">
+<li>Built from wood, stone, and whatever is at hand</li>
+<li>Crowded in places, quiet in others</li>
+<li>Full of smoke, noise, and life</li>
+</ul>
+
+<p>
+People live close together.
+They know each other's business.
+And strangers are noticed.
+</p>
+</div>
+</li>
+<li><a id="orgeddb8fa"></a>Work and Survival<br />
+<div class="outline-text-6" id="text-1-1-1-1-4">
+<p>
+Nothing is wasted.
+People:
+</p>
+<ul class="org-ul">
+<li>Mend what breaks</li>
+<li>Share when they must</li>
+<li>Save what they can</li>
+</ul>
+
+<p>
+A good harvest matters.
+A bad one can ruin everything.
+Coin is important—but not always easy to come by.
+</p>
+</div>
+</li>
+<li><a id="orge02d273"></a>Travel<br />
+<div class="outline-text-6" id="text-1-1-1-1-5">
+<p>
+Most people do not travel far.
+The road is:
+</p>
+<ul class="org-ul">
+<li>Slow</li>
+<li>Unpredictable</li>
+<li>Sometimes dangerous</li>
+</ul>
+
+<p>
+Caravans move goods between places.
+Travellers bring news—and trouble.
+Leaving home is a serious decision.
+</p>
+</div>
+</li>
+<li><a id="org43079f4"></a>Law and Authority<br />
+<div class="outline-text-6" id="text-1-1-1-1-6">
+<p>
+In some places, the law is strong.
+In others, it depends on who is in charge that day.
+Most people:
+</p>
+<ul class="org-ul">
+<li>Keep their heads down</li>
+<li>Avoid trouble where they can</li>
+</ul>
+
+<p>
+Justice can be:
+</p>
+<ul class="org-ul">
+<li>Fair</li>
+<li>Harsh</li>
+<li>Or something in between</li>
+</ul>
+</div>
+</li>
+<li><a id="org85e85b7"></a>The Land<br />
+<div class="outline-text-6" id="text-1-1-1-1-7">
+<p>
+The land is not empty.
+Forests are:
+</p>
+<ul class="org-ul">
+<li>Thick</li>
+<li>Dark</li>
+<li>Easy to get lost in</li>
+</ul>
+
+<p>
+Hills and valleys hide things.
+Some of those things are best left alone.
+People learn early:
+Stay where it is safe.
+</p>
+</div>
+</li>
+<li><a id="org73cb493"></a>Danger<br />
+<div class="outline-text-6" id="text-1-1-1-1-8">
+<p>
+Danger exists—but not always in the open.
+It can be:
+</p>
+<ul class="org-ul">
+<li>A bandit on the road</li>
+<li>A sickness in the village</li>
+<li>A strange happening no one can explain</li>
+</ul>
+
+<p>
+Most people:
+</p>
+<ul class="org-ul">
+<li>Avoid risk</li>
+<li>Trust slowly</li>
+<li>And know when to walk away</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbc65445"></a>People<br />
+<div class="outline-text-6" id="text-1-1-1-1-9">
+<p>
+People are:
+</p>
+<ul class="org-ul">
+<li>Cautious</li>
+<li>Practical</li>
+<li>Often suspicious at first</li>
+</ul>
+
+<p>
+But also:
+</p>
+<ul class="org-ul">
+<li>Capable of kindness</li>
+<li>Loyal once trust is earned</li>
+<li>Willing to help when it matters</li>
+</ul>
+
+<p>
+Communities survive because people rely on each other.
+</p>
+</div>
+</li>
+<li><a id="org2a06dad"></a>Faith and Belief<br />
+<div class="outline-text-6" id="text-1-1-1-1-10">
+<p>
+People believe in the gods.
+They:
+</p>
+<ul class="org-ul">
+<li>Pray when they are afraid</li>
+<li>Give thanks when things go well</li>
+<li>Hope someone is listening</li>
+<li>And hope they're in a good mood</li>
+</ul>
+
+<p>
+Faith is part of life—not something separate from it.
+</p>
+</div>
+</li>
+<li><a id="org2b2980c"></a>Final Word<br />
+<div class="outline-text-6" id="text-1-1-1-1-11">
+<p>
+The world is hard.
+But it is not empty.
+There is:
+</p>
+<ul class="org-ul">
+<li>Warmth in a shared meal</li>
+<li>Comfort in familiar places</li>
+<li>And hope, however small, in carrying on</li>
+</ul>
+
+<p>
+If you are careful, you may survive.
+If you are brave, you may do more.
+But nothing will come easily.
+And that is how things are.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orga8d468e"></a>The Wider World<br />
+<ol class="org-ol">
+<li><a id="org91b52fd"></a>What Folk Have Heard<br />
+<div class="outline-text-6" id="text-1-1-1-2-1">
+<p>
+A rough account of distant lands, based on rumour, travellers' tales, and what little common folk tend to know.
+Most of this is second-hand. Some of it is wrong.
+</p>
+</div>
+</li>
+<li><a id="org90a6b8a"></a>The Empire<br />
+<div class="outline-text-6" id="text-1-1-1-2-2">
+<p>
+A great land to the north and east.
+People say:
+</p>
+<ul class="org-ul">
+<li>It is the largest and most powerful human realm</li>
+<li>Full of cities, soldiers, and priests</li>
+<li>Always dealing with war, unrest, or worse</li>
+</ul>
+
+<p>
+You hear that:
+</p>
+<ul class="org-ul">
+<li>The roads are better than here</li>
+<li>Law is stricter, but more reliable</li>
+<li>There is always work… if you can find it</li>
+</ul>
+
+<p>
+Some say it is the safest place in the world.
+Others say it only looks that way from a distance.
+</p>
+</div>
+</li>
+<li><a id="orgd120c01"></a>Bretonnia<br />
+<div class="outline-text-6" id="text-1-1-1-2-3">
+<p>
+A land of knights and nobles, across the mountains.
+People say:
+</p>
+<ul class="org-ul">
+<li>Knights ride in shining armour and follow strict codes</li>
+<li>Honour means everything to them</li>
+<li>Peasants work the land and know their place</li>
+</ul>
+
+<p>
+You hear that:
+</p>
+<ul class="org-ul">
+<li>A knight's word is his bond</li>
+<li>The land is rich and fertile</li>
+</ul>
+
+<p>
+But also:
+</p>
+<ul class="org-ul">
+<li>Life for common folk can be hard</li>
+<li>Justice depends on who is judging</li>
+</ul>
+</div>
+</li>
+<li><a id="org2aacb5f"></a>Kislev<br />
+<div class="outline-text-6" id="text-1-1-1-2-4">
+<p>
+A cold land far to the north.
+People say:
+</p>
+<ul class="org-ul">
+<li>The people there are tough and stubborn</li>
+<li>Winter lasts most of the year</li>
+<li>They fight constantly against things from the north</li>
+</ul>
+
+<p>
+You hear that:
+</p>
+<ul class="org-ul">
+<li>They ride strange horses and fight from the saddle</li>
+<li>Their cities are built to withstand siege</li>
+</ul>
+
+<p>
+Most agree:
+If Kislev falls, the south will feel it soon enough.
+</p>
+</div>
+</li>
+<li><a id="org8f2e1a8"></a>The Badlands<br />
+<div class="outline-text-6" id="text-1-1-1-2-5">
+<p>
+To the south.
+No one sensible goes there.
+People say:
+</p>
+<ul class="org-ul">
+<li>Orcs and goblins roam in great numbers</li>
+<li>Nothing grows properly</li>
+<li>Everything there wants to kill you</li>
+</ul>
+
+<p>
+Travellers claim:
+</p>
+<ul class="org-ul">
+<li>Ruins lie scattered across the land</li>
+<li>Some still hold treasure… or worse</li>
+</ul>
+
+<p>
+Most advice is simple:
+Stay away.
+</p>
+</div>
+</li>
+<li><a id="org5d4bee4"></a>The Mountains<br />
+<div class="outline-text-6" id="text-1-1-1-2-6">
+<p>
+The great mountain ranges stretch across the world.
+People say:
+</p>
+<ul class="org-ul">
+<li>Dwarfs live there in vast stone halls</li>
+<li>The peaks are rich in ore and danger</li>
+</ul>
+
+<p>
+You hear that:
+</p>
+<ul class="org-ul">
+<li>Passes are narrow and easily blocked</li>
+<li>Many never come back from crossing them</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcaa70d5"></a>The Elven Lands<br />
+<div class="outline-text-6" id="text-1-1-1-2-7">
+<p>
+Far away, and rarely seen.
+People say:
+</p>
+<ul class="org-ul">
+<li>Elves have their own kingdoms, hidden from the world</li>
+<li>They are ancient, powerful, and strange</li>
+</ul>
+
+<p>
+Some claim:
+</p>
+<ul class="org-ul">
+<li>There is an island kingdom far across the sea</li>
+<li>Forests where elves walk unseen among the trees</li>
+</ul>
+
+<p>
+Most folk will never see such places.
+</p>
+</div>
+</li>
+<li><a id="org6729570"></a>The Distant South<br />
+<div class="outline-text-6" id="text-1-1-1-2-8">
+<p>
+Beyond the Badlands and deserts.
+People say:
+</p>
+<ul class="org-ul">
+<li>There are lands of great heat and strange peoples</li>
+<li>Cities older than anything in the north</li>
+</ul>
+
+<p>
+Stories mention:
+</p>
+<ul class="org-ul">
+<li>Jungles filled with ruins</li>
+<li>Creatures no one can name</li>
+</ul>
+
+<p>
+Few who go there return with clear stories.
+</p>
+</div>
+</li>
+<li><a id="orgf49474e"></a>The Far East<br />
+<div class="outline-text-6" id="text-1-1-1-2-9">
+<p>
+So far away it might as well be another world.
+People say:
+</p>
+<ul class="org-ul">
+<li>Great empires exist there</li>
+<li>Their people are disciplined and strange in their ways</li>
+</ul>
+
+<p>
+But most of this is guesswork.
+</p>
+</div>
+</li>
+<li><a id="org67227e1"></a>The Seas<br />
+<div class="outline-text-6" id="text-1-1-1-2-10">
+<p>
+Vast and dangerous.
+People say:
+</p>
+<ul class="org-ul">
+<li>Storms can rise without warning</li>
+<li>Sea monsters drag ships beneath the waves</li>
+</ul>
+
+<p>
+Sailors speak of:
+</p>
+<ul class="org-ul">
+<li>Strange lights on the water</li>
+<li>Things moving beneath the surface</li>
+</ul>
+
+<p>
+Best leave the sea to those who must travel it.
+</p>
+</div>
+</li>
+<li><a id="orgf8850bc"></a>The North<br />
+<div class="outline-text-6" id="text-1-1-1-2-11">
+<p>
+No one speaks of it lightly.
+People say:
+</p>
+<ul class="org-ul">
+<li>The land itself is cursed</li>
+<li>Men who go there do not return… not as men</li>
+</ul>
+
+<p>
+You hear:
+</p>
+<ul class="org-ul">
+<li>Warbands sometimes come south</li>
+<li>Nothing good follows them</li>
+</ul>
+
+<p>
+It is enough to know:
+The north is where things go wrong.
+</p>
+</div>
+</li>
+<li><a id="org10d058f"></a>Final Word<br />
+<div class="outline-text-6" id="text-1-1-1-2-12">
+<p>
+The world is wide.
+Wider than most will ever see.
+And full of places where:
+</p>
+<ul class="org-ul">
+<li>Fortune might be found</li>
+<li>Or where a person might vanish without a trace</li>
+</ul>
+
+<p>
+If you leave home, you will learn quickly:
+Not all stories are lies.
+And not all truths are safe to know.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org8445ce8"></a>The Peoples of the World<br />
+<div class="outline-text-5" id="text-1-1-1-3">
+<p>
+You will meet many kinds of people in your travels.
+Some are familiar.
+Others are not.
+What follows is what most folk know—or think they know.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org4c04e9a"></a>Humans<br />
+<div class="outline-text-6" id="text-1-1-1-3-1">
+<p>
+That's you.
+Humans are found everywhere:
+</p>
+<ul class="org-ul">
+<li>In the Empire</li>
+<li>In the Border Princes</li>
+<li>In distant lands</li>
+</ul>
+
+<p>
+People say:
+</p>
+<ul class="org-ul">
+<li>Humans are adaptable</li>
+<li>Quick to build, quick to fight</li>
+<li>Not always quick to trust</li>
+</ul>
+
+<p>
+Most folk deal with their own kind first.
+</p>
+</div>
+</li>
+<li><a id="org94cd57e"></a>Dwarfs<br />
+<div class="outline-text-6" id="text-1-1-1-3-2">
+<p>
+Short, broad, and strong.
+Dwarfs are known for:
+</p>
+<ul class="org-ul">
+<li>Craftsmanship</li>
+<li>Stonework</li>
+<li>Long memories</li>
+</ul>
+
+<p>
+People say:
+</p>
+<ul class="org-ul">
+<li>They hold grudges for a very long time</li>
+<li>Their word, once given, is solid</li>
+<li>They prefer their own halls to the open world</li>
+</ul>
+
+<p>
+They are respected—but not always easy to deal with.
+</p>
+</div>
+</li>
+<li><a id="org4917397"></a>Elves<br />
+<div class="outline-text-6" id="text-1-1-1-3-3">
+<p>
+Tall, long-lived, and hard to read.
+Most people rarely see them.
+People say:
+</p>
+<ul class="org-ul">
+<li>They are graceful and clever</li>
+<li>They speak strangely and think differently</li>
+<li>They do not forget anything</li>
+</ul>
+
+<p>
+Some claim there are different kinds of elves:
+</p>
+<ul class="org-ul">
+<li>Those who live in forests</li>
+<li>Those who come from across the sea</li>
+</ul>
+
+<p>
+Most folk don't know the difference.
+And most elves don't bother to explain.
+</p>
+</div>
+</li>
+<li><a id="orgb4fec83"></a>Halflings<br />
+<div class="outline-text-6" id="text-1-1-1-3-4">
+<p>
+Small folk, often found living among humans.
+They are said to have their own homeland—a quiet, well-fed corner of the Empire known as the Moot, where they govern themselves in their own way.
+Whether it is as peaceful as they claim is anyone's guess.
+</p>
+
+<p>
+They are known for:
+</p>
+<ul class="org-ul">
+<li>Cooking</li>
+<li>Quick hands</li>
+<li>Friendly manners</li>
+</ul>
+
+<p>
+People say:
+</p>
+<ul class="org-ul">
+<li>They are easy to underestimate</li>
+<li>They are rarely where trouble starts</li>
+</ul>
+
+<p>
+But sometimes:
+</p>
+<ul class="org-ul">
+<li>They know more than they let on</li>
+</ul>
+</div>
+</li>
+<li><a id="org9bfc033"></a>Greenskins<br />
+<div class="outline-text-6" id="text-1-1-1-3-5">
+<p>
+Creatures of war.
+Orcs and goblins are:
+</p>
+<ul class="org-ul">
+<li>Violent</li>
+<li>Unpredictable</li>
+<li>Always looking for a fight</li>
+</ul>
+
+<p>
+People say:
+</p>
+<ul class="org-ul">
+<li>They gather in large numbers</li>
+<li>They fight each other as often as anyone else</li>
+<li>When they unite, it's bad for everyone</li>
+</ul>
+
+<p>
+If they're nearby, you'll hear about it quickly.
+</p>
+</div>
+</li>
+<li><a id="orge6399f7"></a>Beastmen<br />
+<div class="outline-text-6" id="text-1-1-1-3-6">
+<p>
+Things of the wild places.
+Half-man, half-beast—and something worse underneath.
+People say:
+</p>
+<ul class="org-ul">
+<li>They come out of the deep forests</li>
+<li>They hate what men have built</li>
+<li>They strike without warning and leave little behind</li>
+</ul>
+
+<p>
+Most avoid deep forests for a reason.
+Whatever they once were, they are not that now.
+</p>
+</div>
+</li>
+<li><a id="orgb0a9849"></a>Ratmen<br />
+<div class="outline-text-6" id="text-1-1-1-3-7">
+<p>
+Some say there are creatures like rats, but walking like men.
+Stories claim:
+</p>
+<ul class="org-ul">
+<li>They live underground</li>
+<li>They steal, spy, and spread disease</li>
+</ul>
+
+<p>
+Others say:
+</p>
+<ul class="org-ul">
+<li>This is nonsense</li>
+<li>Just stories to scare children</li>
+</ul>
+
+<p>
+Most people:
+</p>
+<ul class="org-ul">
+<li>Laugh it off</li>
+<li>Or change the subject</li>
+</ul>
+
+<p>
+Still…
+Strange things happen in dark places.
+</p>
+</div>
+</li>
+<li><a id="org727541a"></a>Others<br />
+<div class="outline-text-6" id="text-1-1-1-3-8">
+<p>
+There are said to be many more:
+</p>
+<ul class="org-ul">
+<li>Creatures in distant lands</li>
+<li>Beings that do not belong in the world at all</li>
+</ul>
+
+<p>
+Most folk never see them.
+And most are glad of it.
+</p>
+</div>
+</li>
+<li><a id="orgac10864"></a>Final Word<br />
+<div class="outline-text-6" id="text-1-1-1-3-9">
+<p>
+The world is wider than you think.
+And not everything in it is meant to be understood.
+</p>
+
+<p>
+It is best to remember:
+Not everything that looks human is friendly.
+And not everything that isn't human is your enemy.
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgd1f0c39" class="outline-4">
+<h4 id="orgd1f0c39"><span class="section-number-4">1.1.2.</span> Regional Gazetteers</h4>
+<div class="outline-text-4" id="text-1-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orga529c20"></a>The Border Princes<br />
+<div class="outline-text-5" id="text-1-1-2-1">
+<p>
+This is where you were born. This is what you know.
+The Border Princes are not a single land, not really.
+They are a patchwork of:
+</p>
+<ul class="org-ul">
+<li>Small territories</li>
+<li>Crumbling forts</li>
+<li>Villages clinging to life</li>
+<li>Ruins from older times</li>
+</ul>
+
+<p>
+No one rules it all.
+If someone claims they do, they won't for long.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org7f46868"></a>What Folk Say<br />
+<div class="outline-text-6" id="text-1-1-2-1-1">
+<p>
+People say:
+</p>
+<ul class="org-ul">
+<li>Anyone can become a ruler here… if they can hold what they take</li>
+<li>Law depends on who has the most soldiers nearby</li>
+<li>Yesterday's lord can be tomorrow's corpse</li>
+</ul>
+
+<p>
+You grow up knowing:
+</p>
+<ul class="org-ul">
+<li>Power is personal</li>
+<li>Promises are only as good as the swords behind them</li>
+<li>Trouble is never far away</li>
+</ul>
+</div>
+</li>
+<li><a id="org7685a38"></a>Settlements and Life<br />
+<div class="outline-text-6" id="text-1-1-2-1-2">
+<p>
+Most places are:
+</p>
+<ul class="org-ul">
+<li>Fortified villages</li>
+<li>Rough towns built around trade routes</li>
+<li>Old keeps taken over and rebuilt again and again</li>
+</ul>
+
+<p>
+Nothing here feels permanent.
+Even the oldest buildings often sit on:
+</p>
+<ul class="org-ul">
+<li>Older foundations</li>
+<li>Forgotten cellars</li>
+<li>Buried ruins</li>
+</ul>
+
+<p>
+People don't always ask what lies beneath.
+</p>
+</div>
+</li>
+<li><a id="org5742bd0"></a>Power<br />
+<div class="outline-text-6" id="text-1-1-2-1-3">
+<p>
+From what you've seen, power usually belongs to:
+</p>
+<ul class="org-ul">
+<li>Local rulers (often self-declared "princes")</li>
+<li>Mercenary captains</li>
+<li>Wealthy landowners</li>
+<li>Anyone who can gather enough armed followers</li>
+</ul>
+
+<p>
+Alliances shift.
+Borders change.
+Sometimes overnight.
+</p>
+</div>
+</li>
+<li><a id="orga429f04"></a>Trade and Survival<br />
+<div class="outline-text-6" id="text-1-1-2-1-4">
+<p>
+Trade keeps the Border Princes alive.
+Caravans bring:
+</p>
+<ul class="org-ul">
+<li>Food</li>
+<li>Tools</li>
+<li>Weapons</li>
+<li>News</li>
+</ul>
+
+<p>
+Without them, many places would not last a season.
+Merchants are:
+</p>
+<ul class="org-ul">
+<li>Necessary</li>
+<li>Watched carefully</li>
+<li>Sometimes richer than the people they deal with</li>
+</ul>
+
+<p>
+Escorting a caravan is dangerous—but common work.
+</p>
+</div>
+</li>
+<li><a id="org9322b94"></a>Dangers<br />
+<div class="outline-text-6" id="text-1-1-2-1-5">
+<p>
+You don't need to travel far to find trouble.
+Common threats include:
+</p>
+<ul class="org-ul">
+<li>Bandits</li>
+<li>Orcs and goblins</li>
+<li>Beastmen from the wild places</li>
+<li>Raiders from beyond the hills</li>
+</ul>
+
+<p>
+And then there are:
+</p>
+<ul class="org-ul">
+<li>Old ruins no one fully explores</li>
+<li>Places people avoid without saying why</li>
+</ul>
+</div>
+</li>
+<li><a id="org2d37bd1"></a>The Land<br />
+<div class="outline-text-6" id="text-1-1-2-1-6">
+<p>
+The land is uneven and often unforgiving.
+You know:
+</p>
+<ul class="org-ul">
+<li>Roads can vanish into mud after rain</li>
+<li>Forests are thick and easy to get lost in</li>
+<li>Hills and valleys hide things you don't want to find</li>
+</ul>
+
+<p>
+You learn early:
+Stay on known paths when you can.
+</p>
+</div>
+</li>
+<li><a id="orgcd043e7"></a>Opportunities<br />
+<div class="outline-text-6" id="text-1-1-2-1-7">
+<p>
+For those willing to take risks, the Border Princes offer:
+</p>
+<ul class="org-ul">
+<li>Work as a caravan guard or hired sword</li>
+<li>Land—if you can take it and hold it</li>
+<li>The chance to become something, for better or worse</li>
+</ul>
+
+<p>
+Nothing is given here.
+It is taken, held, or lost.
+</p>
+</div>
+</li>
+<li><a id="org7b2706b"></a>Why People Stay or Leave<br />
+<div class="outline-text-6" id="text-1-1-2-1-8">
+<p>
+Some stay because:
+</p>
+<ul class="org-ul">
+<li>It is home</li>
+<li>They have nowhere else to go</li>
+</ul>
+
+<p>
+Others leave because:
+</p>
+<ul class="org-ul">
+<li>There is nothing left for them</li>
+<li>Or because they believe they can do better elsewhere</li>
+</ul>
+
+<p>
+Many who leave do not return.
+</p>
+</div>
+</li>
+<li><a id="org39ae4b6"></a>Final Word<br />
+<div class="outline-text-6" id="text-1-1-2-1-9">
+<p>
+The Border Princes are not stable.
+They are not safe.
+But they are yours.
+And if a person is willing to take risks—
+they can become something here that they never could anywhere else.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org374f03a"></a>The Empire<br />
+<div class="outline-text-5" id="text-1-1-2-2">
+<p>
+The Empire is the greatest human realm in the known world.
+It lies to the north of the Border Princes, beyond the mountains.
+It is vast, old, and never quite at peace.
+</p>
+
+<p>
+To those who have only heard of it:
+</p>
+<ul class="org-ul">
+<li>It is the standard against which other lands are measured</li>
+<li>It is proof that humans can build something that lasts</li>
+<li>It is a place where things are—supposedly—more orderly</li>
+</ul>
+
+<p>
+Whether that is true depends on where you stand.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgf6df705"></a>What People Say<br />
+<div class="outline-text-6" id="text-1-1-2-2-1">
+<p>
+People say:
+</p>
+<ul class="org-ul">
+<li>The Empire has armies that could swallow entire nations</li>
+<li>Its cities are larger than anything in the Border Princes</li>
+<li>Its roads go everywhere and carry everything</li>
+</ul>
+
+<p>
+You hear:
+</p>
+<ul class="org-ul">
+<li>The law there is real law—not just the word of whoever holds the most swords</li>
+<li>A person can make something of themselves there, if they work for it</li>
+<li>But the Empire is not as united as it looks from a distance</li>
+</ul>
+
+<p>
+Some say the provinces squabble like princes.
+Some say the church holds more power than the throne.
+Most agree: it is complicated.
+</p>
+</div>
+</li>
+<li><a id="org46c9a27"></a>Daily Life<br />
+<div class="outline-text-6" id="text-1-1-2-2-2">
+<p>
+Common folk in the Empire live much as they do elsewhere:
+</p>
+<ul class="org-ul">
+<li>Working the land or a trade</li>
+<li>Keeping faith with their gods</li>
+<li>Staying out of trouble</li>
+</ul>
+
+<p>
+But the Empire has more of everything:
+</p>
+<ul class="org-ul">
+<li>More people</li>
+<li>More rules</li>
+<li>More priests</li>
+<li>More soldiers</li>
+</ul>
+
+<p>
+There are courts and councils, guilds and orders.
+For a commoner, most of this is background noise.
+What matters is: work, food, safety.
+And in the Empire, those things are—usually—more available.
+</p>
+</div>
+</li>
+<li><a id="org53f069b"></a>The Emperor and the Provinces<br />
+<div class="outline-text-6" id="text-1-1-2-2-3">
+<p>
+The Empire is ruled by an Emperor, chosen by powerful nobles called Electors.
+People say:
+</p>
+<ul class="org-ul">
+<li>He commands great armies and keeps the provinces together</li>
+<li>His word carries across the land</li>
+</ul>
+
+<p>
+But common folk also know:
+</p>
+<ul class="org-ul">
+<li>Each province has its own lord and its own ways</li>
+<li>Some provinces are wealthy; others are poor or troubled</li>
+<li>A person from one end of the Empire may feel almost foreign to another</li>
+</ul>
+
+<p>
+The Emperor holds it together.
+Or so everyone hopes.
+</p>
+</div>
+</li>
+<li><a id="orgd018ff8"></a>Faith and the Gods<br />
+<div class="outline-text-6" id="text-1-1-2-2-4">
+<p>
+The people of the Empire worship many gods.
+Temples and priests are found in most towns—sometimes more than one.
+</p>
+
+<p>
+The most widely known:
+</p>
+<ul class="org-ul">
+<li><b>Sigmar</b> — the Empire's own god, a great warrior-king who became divine. His cult is the most powerful.</li>
+<li><b>Ulric</b> — god of winter, wolves, and battle. Older than Sigmar, and his followers know it.</li>
+<li><b>Shallya</b> — goddess of mercy and healing. Her dove-marked temples are where the sick and the desperate go. Hard to find a town without one.</li>
+<li><b>Taal and Rhya</b> — gods of the wild and of the earth. Widely worshipped in rural areas.</li>
+<li><b>Morr</b> — god of the dead and of dreams. His black-robed priests bury the dead and keep them where they belong.</li>
+</ul>
+
+<p>
+People attend services.
+Or at least, they are expected to.
+And in hard times, they pray to whoever seems most likely to help.
+</p>
+</div>
+</li>
+<li><a id="org57956b4"></a>Trade and Roads<br />
+<div class="outline-text-6" id="text-1-1-2-2-5">
+<p>
+The Empire's roads are one of its great achievements.
+Caravans travel between cities constantly:
+</p>
+<ul class="org-ul">
+<li>Carrying grain, cloth, ore, and finished goods</li>
+<li>Bringing news from distant provinces</li>
+<li>Making the Empire function</li>
+</ul>
+
+<p>
+Rivers are just as important:
+</p>
+<ul class="org-ul">
+<li>The Reik and its tributaries carry as much trade as the roads</li>
+<li>River towns grow fat on what passes through them</li>
+</ul>
+
+<p>
+Merchants are powerful.
+Guilds are powerful.
+And money, in the Empire, is always moving.
+</p>
+</div>
+</li>
+<li><a id="org6c57839"></a>Soldiers and War<br />
+<div class="outline-text-6" id="text-1-1-2-2-6">
+<p>
+The Empire is always preparing for war—or already fighting one.
+People say:
+</p>
+<ul class="org-ul">
+<li>Its armies are well-trained and numerous</li>
+<li>It uses gunpowder weapons that can level walls</li>
+<li>It fights threats from every direction at once</li>
+</ul>
+
+<p>
+Even in peaceful times:
+</p>
+<ul class="org-ul">
+<li>Soldiers are never far away</li>
+<li>Militia are drilled in the larger towns</li>
+<li>The roads are patrolled</li>
+</ul>
+
+<p>
+This is what keeps the Empire standing.
+Or so its people believe.
+</p>
+</div>
+</li>
+<li><a id="orgaade42b"></a>Dangers<br />
+<div class="outline-text-6" id="text-1-1-2-2-7">
+<p>
+The Empire is safer than many places.
+But it is not safe.
+</p>
+
+<p>
+Threats include:
+</p>
+<ul class="org-ul">
+<li>Bandits and outlaws in the wilder provinces</li>
+<li>Beastmen in the forests—more numerous than people like to admit</li>
+<li>Unrest between provinces and noble houses</li>
+<li>Disease in the crowded cities</li>
+</ul>
+
+<p>
+And then there are things people do not talk about openly:
+</p>
+<ul class="org-ul">
+<li>Strange cults, meeting in cellars</li>
+<li>Corruption in places of authority</li>
+<li>Disappearances that no one can explain</li>
+</ul>
+
+<p>
+The Empire has a special force—witch hunters—who pursue the worst of this.
+People are glad they exist.
+And afraid of them in equal measure.
+</p>
+</div>
+</li>
+<li><a id="org9bb3499"></a>Opportunities<br />
+<div class="outline-text-6" id="text-1-1-2-2-8">
+<p>
+For someone willing to travel north:
+</p>
+<ul class="org-ul">
+<li>Work is easier to find than in the Border Princes</li>
+<li>Cities offer trades, guilds, and institutions</li>
+<li>There are armies to join, caravans to escort, and temples that employ people</li>
+</ul>
+
+<p>
+But:
+</p>
+<ul class="org-ul">
+<li>Competition is fierce</li>
+<li>Outsiders are watched</li>
+<li>And the rules—of law, of guild, of church—are more present than back home</li>
+</ul>
+
+<p>
+The Empire rewards those who fit its systems.
+It is harder on those who don't.
+</p>
+</div>
+</li>
+<li><a id="org39839ea"></a>As Others See It<br />
+<div class="outline-text-6" id="text-1-1-2-2-9">
+<p>
+From the Border Princes, the Empire seems:
+</p>
+<ul class="org-ul">
+<li>Stronger</li>
+<li>Safer</li>
+<li>More stable</li>
+</ul>
+
+<p>
+But also:
+</p>
+<ul class="org-ul">
+<li>Distant</li>
+<li>Complicated</li>
+<li>Not always as fair as it sounds from a distance</li>
+</ul>
+
+<p>
+Still, many believe:
+If you can make it there, you can make it anywhere.
+</p>
+</div>
+</li>
+<li><a id="org9d2d70c"></a>Final Word<br />
+<div class="outline-text-6" id="text-1-1-2-2-10">
+<p>
+The Empire is not a promised land.
+It is a place where power is organised, not absent.
+Where the dangers are better hidden—and the opportunities are real, but earned.
+</p>
+
+<p>
+If you go there, go with open eyes.
+It is not the Border Princes.
+And it will not treat you as one of its own until you prove you are.
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2026-01-19T13:00</p>
+<p class="author">Author: Timothy J. B. Welch</p>
+<p class="date">Created: 2026-04-20 Mon 10:51</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
